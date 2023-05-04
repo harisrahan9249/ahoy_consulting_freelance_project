@@ -9,7 +9,7 @@
     <title>ahoy consulting</title>
 </head>
 <body class="h-full ">
-    <h1 class=" text-white">Hello</h1>
+    
 
     <div id="root"></div>
     
