@@ -10,6 +10,10 @@ import About from './component/About'
 import Contact from './component/Contact'
 import Ourvalues from './component/Ourvalues'
 import Userpage from './component/Userpage'
+import Footer from './component/Footer'
+import Adds from './component/Adds'
+import Czech from './component/Czech'
+
 
 
 function App() {
@@ -22,16 +26,21 @@ function App() {
     
     <Router>
         <Routes>
-            <Route path='/' element={<Home/>}/>
+            
+            <Route exact path='/' element={<Home/>}/>
             <Route exact path='/signup' element={<Registration/>}/>
             <Route exact path='/login' element={<Login/>}/>
             <Route exact path='/about' element={<About/>}/>
             <Route exact path='/contact' element={<Contact/>}/>
             <Route exact path='/value' element={<Ourvalues/>}/>
             <Route exact path='/userpage' element={<Userpage/>}/>
+            <Route exact path='/adds' element={<Adds/>}/>
+            <Route exact path='/czech' element={<Czech/>}/>
+           
             
         </Routes>
     </Router>
+    <Footer/>
 
     
   </>

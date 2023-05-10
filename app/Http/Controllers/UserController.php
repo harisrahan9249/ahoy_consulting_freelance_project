@@ -38,4 +38,9 @@ class UserController extends Controller
             return response()->json(['success' => false], 401);
         }
     }
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+    }
+    
 }

@@ -24,9 +24,9 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8 mt-7">
       <div
-        className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        className="absolute inset-x-0 top-[3rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[20rem]"
         aria-hidden="true"
       >
         <div

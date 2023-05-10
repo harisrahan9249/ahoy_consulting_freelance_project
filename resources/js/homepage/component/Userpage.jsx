@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+// import Logout from './Logout'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -11,6 +12,8 @@ const navigation = [
 
 export default function Userpage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  
 
   return (
     <div className="bg-white">
@@ -44,6 +47,7 @@ export default function Userpage() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+             {/* <Logout/> */}
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
@@ -84,12 +88,7 @@ export default function Userpage() {
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                
                 </div>
               </div>
             </div>
@@ -122,7 +121,7 @@ export default function Userpage() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
+            You're on the right path, keep moving forwar
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet

@@ -1,12 +1,16 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon,  XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
+
 
 
 const navigation = [
-  { name: 'Home', href: '/', current: true },
+ 
   { name: 'About', href: '/about', current: false },
-  { name: 'Sing up', href: '/signup', current: false },
+  { name: 'Vision & Mission', href: '/value', current: false },
+  { name: 'Contact', href: '/contact', current: false },
+
   
 
 
@@ -17,8 +21,9 @@ function classNames(...classes) {
 }
 
 export default function Navba() {
+  
   return (
-    <Disclosure as="nav" className="bg-purple-800">
+    <Disclosure as="nav" className="bg-purple-900">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -54,7 +59,7 @@ export default function Navba() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white cursor-pointer',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -66,26 +71,31 @@ export default function Navba() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button
+                <a
                   type="button"
+                  href='/'
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+</svg>
+
+                </a>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
-                  {/* <div>
+                  <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                       <a
+                        
+                        href=''
+                        className='text-gray-300 hover:bg-gray-700 hover:text-white cursor-pointer bg-gray-900 rounded-md px-3 py-2 text-sm font-medium '
+                      >
+                       signup
+                      </a>
                     </Menu.Button>
-                  </div> */}
+                  </div>
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
@@ -102,11 +112,11 @@ export default function Navba() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Your Profile
+                            Register
                           </a>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
@@ -115,14 +125,14 @@ export default function Navba() {
                             Settings
                           </a>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            Login
                           </a>
                         )}
                       </Menu.Item>

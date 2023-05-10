@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> --}}
     <link rel="stylesheet" href="/css/style.css">
-    <title>ahoy consulting</title>
+    <title>ahoy test</title>
 </head>
 <body class="h-full ">
     
