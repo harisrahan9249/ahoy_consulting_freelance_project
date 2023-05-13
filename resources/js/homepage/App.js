@@ -13,6 +13,7 @@ import Userpage from './component/Userpage'
 import Footer from './component/Footer'
 import Adds from './component/Adds'
 import Czech from './component/Czech'
+import German from './component/German'
 
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route exact path='/userpage' element={<Userpage/>}/>
             <Route exact path='/adds' element={<Adds/>}/>
             <Route exact path='/czech' element={<Czech/>}/>
+            <Route exact path='/german' element={<German/>}/>
            
             
         </Routes>
